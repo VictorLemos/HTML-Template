@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Javascript Calculadora</title>
+
+<script type="text/javascript">
+	function mostrarCalculadora() {
+		var numero1 = prompt("Digite um número");
+		var numero2 = prompt("Digite outro número");
+		var operacao = prompt("Digite a operação desejada");
+
+		numero1 = parseInt(numero1);
+		numero2 = parseInt(numero2);
+
+		var resultado;
+		if (operacao == "+") {
+			resultado = numero1 + numero2;
+		} else if (operacao == "-") {
+			resultado = numero1 - numero2;
+		} else if (operacao == "/") {
+			resultado = numero1 / numero2;
+		} else if (operacao == "*") {
+			resultado = numero1 * numero2;
+		} else {
+			alert("Operação inválida");
+		}
+		alert(resultado);
+	}
+	function alteraCor(tag,cor){
+		tag.style.backgroundColor = cor;
+	}
+</script>
+</head>
+<body>
+	<form>
+		<div>
+			<input onclick="mostrarCalculadora()" type="button" 
+					value="Mostrar calculadora" name="calculo" />
+			<input type="text" onfocus="alteraCor(this,'yellow')" 
+								onblur="alteraCor(this,'white')"/>		
+			<input type="text"/>
+		</div>
+	</form>
+</body>
+</html>

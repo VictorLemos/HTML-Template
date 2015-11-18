@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" dir="ltr">
+    <head>
+        <title>Exemplo Menu</title>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=iso-8859-1" />
+    	<meta name="author" content="Prof Fabio S Botelho" />
+    		
+    	<style type="text/css">
+    			#div_conteudo ul.menu
+    			{
+    				width: 530px; /* define o tamanho da largura do menu */
+    				height: 40px; /* define o tamanho da altura do menu */
+    				display:block; /* define que havera uma quebra de linha antes de depois da div */
+    			}
+
+    			#div_conteudo ul.menu li
+    			{
+    				display: inline; /*altera a visualizaçao dos itens do menu para inline, ou seja, todos os itens na mesma  linha */
+    			}
+
+    			#div_conteudo ul.menu li a
+    			{
+    				padding: 8px 10px; /* define o espacamento interno sendo 8px para top e base e 10px para esquerda e direita */
+    				float: right; /* define a apresentacao do elemento sendo da direita para a esquerda. Veja que a lista de itens, comeca do ultimo para o primeiro e na apresentacao é o inverso. isto se da por causa do float right: */
+    				display:block; /* define que havera uma quebra de linha antes de depois da div */
+    			}
+
+    			#div_conteudo ul.menu li a:hover
+    			{
+    				background-color:#CC0000; /* define que a cor de fundo no momento da acao a:hover */
+    				color:#CCCCCC /* define a cor do texto no momento da açao a:hover */
+    			}
+
+    		</style>
+	</head>
+	<body>
+		<div id="div_conteudo">
+			<ul class="menu">
+				<li><a href="#" title="Contato">Contato</a></li>
+				<li><a href="#" title="Instrumento">Musica</a></li>
+				<li><a href="#" title="Brinquedo">Brinquedo</a></li>
+				<li><a href="#" title="Carro">Carro</a></li>
+				<li><a href="#" title="Página Principal">Página Principal</a></li>
+			</ul>
+		</div>
+	</body>
+</html>

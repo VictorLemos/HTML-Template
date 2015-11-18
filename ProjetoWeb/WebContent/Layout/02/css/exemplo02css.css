@@ -1,0 +1,34 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#menu 
+{
+	height: 600px;
+	width: 200px;
+	float: left;
+	background-color:#99FF00
+}
+
+#conteudo 
+{
+	float: left;
+	height: 600px;
+	width: 600px;
+	background-color:#99CCFF
+}
+
+#navegacao 
+{
+	float:left;
+	height: 600px;
+	width: 100px;
+	background-color:#999999
+}
+
+h1
+{
+	font-size:14px;
+}

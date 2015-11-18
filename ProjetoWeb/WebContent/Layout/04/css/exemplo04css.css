@@ -1,0 +1,49 @@
+/*
+ * CSS que compoe os exemplos dos slide da apresentação do dia 26/05/09.
+ * Slide Exemplo 03
+*/ 
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#cabecalho {
+	height: 100px;
+	width: 100%;
+	background-color:#0099FF
+}
+
+#menu {
+	height:auto;
+	width: 20%;
+	float:left;
+	background-color:#99FF00
+}
+
+#conteudo {
+	float:left;
+	height:auto;
+	width: 70%;
+}
+
+#navegacao
+{
+    float:left;
+	height:auto;
+	width: 10%;
+	background-color:Maroon;
+}
+
+#rodape {
+	clear: left;
+	height: 150px;
+	width:100%;
+	background-color:#999999
+}
+
+h1
+{
+	font-size:14px;
+	text-align:center
+}

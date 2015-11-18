@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" dir="ltr">
+<head>
+    <title>Exemplo Formulario</title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=iso-8859-1" />
+    <meta name="author" content="Prof Fabio S Botelho" />
+    <!--  #ffffff = #fff  / #ff7733 = #f73 / (pares) mas #F73309 != #F309 -->
+    <style type="text/css">
+        fieldset
+        {
+            border: 1px solid #6F6F6F;
+            width: 20em;
+            background-color: #F5F5F5;
+            font: 13px "Verdana" , sans-serif;
+        }
+        legend
+        {
+            color: #fff; 
+            background: #6F6F6F;
+            border: 1px solid #781351;
+            padding: 2px 6px;
+        }
+        label
+        {
+            width: 4em;
+            float: left;
+            text-align: right;
+            margin-right: 0.5em;
+            display: block;
+        }
+        input
+        {
+            color: #781351;
+            background: #fff;
+            border: 1px solid #ccc;
+        }
+        input:focus
+        {
+            color: #781351;
+            background: #fff;
+            border: 1px solid #cc9900;
+        }
+        .button
+        {
+            color: #000;
+            background: #EEE;
+            border: 2px outset #ccc;
+            margin-left: 11.0em;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Login de Usuarios</legend>
+            <p>
+                <label for="name">E-mail</label>
+                <input type="text" id="name" />
+            </p>
+            <p>
+                <label for="e-mail">Senha</label>
+                <input type="password" id="e-mail" />
+            </p>
+            <p>
+                <input class="button" type="submit" name="btnEnviar" value="Logar" />
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<html lang='pt-BR'> 
+<head> 
+
+<meta charset="utf-8" />
+<title>Template</title> 
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.min.css"/>
+<script src="js/jquery-2.0.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="js/validadorCampos.js" charset="ISO-8859-1"></script>
+</head> 
+<body> <!-- O seu HTML vem aqui! --> 
+
+<!-- Inicio Menu -->
+<div class="navbar navbar-default">
+	<div class="container">
+		<a href="#" class="navbar-brand">Empresa XPTO</a>
+		<ul class="nav navbar-nav">
+			<li class="dropdown"><a href="#" class="dropdown-toggle"
+				data-toggle="dropdown">Clientes<b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="index.html">Cadastrar Cliente</a></li>
+					<li><a href="clientes.html">Clientes</a></li>
+				</ul>
+			</li>		
+		</ul>
+	</div>
+</div>
+<!-- Fim Menu -->
+
+<div class="container">
+	
+	<form action="cadastrar" onsubmit="return validaCampos()">
+	
+		<legend>Cadastro de Cliente</legend>
+		<div id="erro" style="color:red;"></div>
+		<div class="col-md-6">
+			<label for="nome">Nome</label>
+			<input type="text" id="nome" name="nome" placeholder="Nome" class="form-control"/>
+		</div>
+		<div class="col-md-6">
+			<label for="email">Email</label>
+			<input type="text" id="email" name="email" placeholder="Email" class="form-control"/>
+		</div>
+		<div class="col-md-6">
+			<label for="senha">Senha</label>		
+			<input type="password" id="senha" name="senha" placeholder="Senha" class="form-control"/>
+		</div>
+		<div class="col-md-6">
+			<label for="cSenha">Confirme a senha</label>
+			<input type="password" id="cSenha" name="cSenha" placeholder="Confirmar senha" class="form-control"/>
+		</div>
+		<div class="col-md-6">
+			<label for="dtNasc">Data Nascimento</label>
+			<input type="text" id="dtNasc" name="dtNasc" class="form-control"/>
+		</div>
+		<div class="col-md-6">
+			<label>Sexo</label>
+			<input type="radio" id="masc" name="sexo"/>
+			<label for="masc">Masculino</label>
+			<input type="radio" id="fem" name="sexo"/>
+			<label for="fem">Feminino</label><br/>
+			<label for="estado">Estado</label>
+			<select id="estado">
+				<option>Selecione</option>
+				<option>SP</option>
+				<option>RJ</option>
+				<option>MG</option>
+				<option>ES</option>
+			</select><br/>
+		</div><br/>
+		<div class="col-md-12">
+			<input type="submit" value="Enviar" class="btn btn-success" />
+			<input type="reset" value="Limpar" class="btn btn-info"/>
+		</div>		
+</form>
+</div>
+</body> 
+</html>
+	

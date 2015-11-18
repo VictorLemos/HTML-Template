@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+<style type="text/css">
+	td{
+		width: 50px;
+		height: 50px;
+	}
+</style>
+<script type="text/javascript">
+	var jogada = 0;
+	function joga(node){
+		if (node.innerHTML == ""){//<--ADICIONAR
+			if (jogada == 0){
+				node.innerHTML = "X";
+				node.style.backgroundColor = "orange";
+				jogada = 1;
+			}else{
+				node.innerHTML = "O";
+				node.style.backgroundColor = "yellow";
+				jogada = 0;
+			}
+		}else{//<---ADICIONAR
+			alert("Vc não pode jogar ai");		
+		}
+		
+		//Valida se alguem ganhou
+		//....
+	}
+	
+	
+</script>
+</head>
+<body>
+	<table border="1" cellspacing="0">
+		<tr>
+			<td onclick="joga(this)"></td>
+			<td onclick="joga(this)"></td>
+			<td onclick="joga(this)"></td>
+		</tr>
+		<tr>
+			<td onclick="joga(this)"></td>
+			<td onclick="joga(this)"></td>
+			<td onclick="joga(this)"></td>
+		</tr>
+		<tr>
+			<td onclick="joga(this)"></td>
+			<td onclick="joga(this)"></td>
+			<td onclick="joga(this)"></td>
+		</tr>	
+	</table>
+</body>
+</html>

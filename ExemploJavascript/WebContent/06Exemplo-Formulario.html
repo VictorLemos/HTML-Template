@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>JS - Formulários</title>
+<script type="text/javascript">
+	function calcula(){
+		var valor1 = document.getElementById("v1").value;
+		var valor2 = document.getElementById("v2").value;
+		var resultado = parseInt(valor1) + parseInt(valor2);
+		alert(resultado);
+	}
+</script>
+</head>
+<body>
+
+<form action="#" method="post">
+	<fieldset>
+		<legend>Calculadora</legend>
+		<label for="v1">Valor 1</label>
+		<input type="text" id="v1"/><br/>
+		<label for="v2">Valor 2</label>
+		<input type="text" id="v2"/><br/>
+		<input type="submit" value="OK" onclick="calcula()"/>
+	</fieldset>
+</form>
+
+
+</body>
+</html>

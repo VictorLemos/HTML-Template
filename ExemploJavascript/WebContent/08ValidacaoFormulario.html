@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Validação Fomulário</title>
+
+<script type="text/javascript">
+	function validaCampos(){
+		var erro = document.getElementById("erro");
+		
+		var nome = document.getElementById("nome");
+		if (nome.value == ""){
+			erro.innerHTML = "O nome não pode ser vazio";
+			return false;
+		}
+		
+		var senha = document.getElementById("senha");
+		if (senha.value == ""){
+			erro.innerHTML = "A senha não pode ser vazia";
+			return false;
+		}
+		
+		var cSenha = document.getElementById("cSenha");
+		if (cSenha.value == ""){
+			erro.innerHTML = "A confimação da senha não pode ser vazia";
+			return false;
+		}
+		
+		var dtNasc = document.getElementById("dtNasc");
+		if (dtNasc.value == ""){
+			erro.innerHTML = "A data de nascimento não pode ser vazia";
+			return false;
+		}
+		
+		var masc = document.getElementById("masc");
+		var fem = document.getElementById("fem");
+		// Valida se o usuário escolheu um sexo
+		if (masc.checked == false && fem.checked == false){
+			erro.innerHTML = "Selecione o seu sexo";
+			return false;
+		}
+		
+		//Valida se os campos de senha e confirmação de senha 
+		//estão iguais
+		if (senha.value != cSenha.value){
+			erro.innerHTML = "A senha não confere";
+			return false;
+		}
+		
+		//Senha com mínimo de 8 caracteres
+		if (senha.value.length < 8){
+			erro.innerHTML = "Senha minimo de 8 caracteres";
+			return false;
+		}
+		
+		//Estado obrigatório
+		var estado = document.getElementById("estado");
+		if (estado.value == "Selecione"){
+			erro.innerHTML = "Estado é obrigatório";
+			return false;
+		}
+		
+		var email = document.getElementById("email");
+		if (formatoEmail(email.value)==false){
+			erro.innerHTML = "Email inválido";
+			return false;
+		}
+		
+		if (formatoData(dtNasc.value)==false){
+			erro.innerHTML = "Data inválido";
+			return false;
+		}
+		return true;
+	}
+	
+	function formatoData(valor){
+		var padrao = /^((0?[1-9]|[12]\d)\/(0?[1-9]|1[0-2])|30\/(0?[13-9]|1[0-2])|31\/(0?[13578]|1[02]))\/(19|20)?\d{2}$/;
+		return padrao.test(valor);	
+	}
+	
+	function formatoEmail(valor){
+		var padrao = /^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([AZa-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zAZ]{2,6}$/;
+		return padrao.test(valor);
+	}
+	
+</script>
+
+</head>
+<body>
+
+<form action="cadastrar" onsubmit="return validaCampos()">
+	<fieldset>
+		<legend>Cadastro de Cliente</legend>
+		<div id = "erro" style="color:red;"></div>
+		<label for="nome">Nome</label>
+		<input type="text" id="nome" name="nome"/><br/>
+		<label for="senha">Senha</label>
+		<input type="password" id="senha" name="senha"/><br/>
+		<label for="cSenha">Confirme a senha</label>
+		<input type="password" id="cSenha" name="cSenha"/><br/>
+		<label for="email">Email</label>
+		<input type="text" id="email" name="email"/><br/>
+		<label for="dtNasc">Data Nascimento</label>
+		<input type="text" id="dtNasc" name="dtNasc"/><br/>
+		<label>Sexo</label>
+		<input type="radio" id="masc" name="sexo"/>
+		<label for="masc">Masculino</label>
+		<input type="radio" id="fem" name="sexo"/>
+		<label for="fem">Feminino</label><br/>
+		<label for="estado">Estado</label>
+		<select id="estado">
+			<option>Selecione</option>
+			<option>SP</option>
+			<option>RJ</option>
+			<option>MG</option>
+			<option>ES</option>
+		</select><br/>
+		<input type="submit" value="Enviar" />
+		<input type="reset" value="Limpar"/>
+	</fieldset>
+</form>
+</body>
+</html>

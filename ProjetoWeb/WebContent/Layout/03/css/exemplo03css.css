@@ -1,0 +1,36 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#cabecalho {
+	height: 100px;
+	width: 100%;
+	background-color:#0099FF
+}
+
+#menu {
+	height:auto;
+	width: 20%;
+	float:left;
+	background-color:#99FF00
+}
+
+#conteudo {
+	float:left;
+	height:auto;
+	width: 80%;
+}
+
+#rodape {
+	clear: left;
+	height: 150px;
+	width:100%;
+	background-color:#999999
+}
+
+h1
+{
+	font-size:14px;
+	text-align:center
+}
